@@ -1,6 +1,12 @@
 package com.example.atack08.practica_fragments;
 
+import android.app.Activity;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 /**
@@ -17,6 +23,31 @@ public class FragmentListado extends Fragment {
                     new Pelicula("Carrie","Stephen King",125,1995)};
 
     private PeliculasListener listener;
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+
+
+        return inflater.inflate(R.layout.fragment_listado, container, false);
+
+    }
+
+    public void onActivityCreated(Bundle state){
+
+        super.onActivityCreated(state);
+
+        lsListado = (ListView)getView().findViewById(R.id.listado);
+
+        //lsListado.setAdapter(new AdaptadorPeliculas(this));
+
+    }
+
+
+
+
+
+
+
+
 
 
 
